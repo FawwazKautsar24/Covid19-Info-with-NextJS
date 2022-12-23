@@ -3,7 +3,7 @@ import React from "react";
 class Index extends React.Component{
     render(){
         return (
-            "Hello Index"
+            <button className="btn btn-success">Indonesia</button>
         );
     }
 }
