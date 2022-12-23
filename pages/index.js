@@ -1,9 +1,10 @@
 import React from "react";
+import IndexPage from "../components/Dashboard/IndexPage";
 
 class Index extends React.Component{
     render(){
         return (
-            <button className="btn btn-success">Indonesia</button>
+            <IndexPage isGlobal={true} />
         );
     }
 }
