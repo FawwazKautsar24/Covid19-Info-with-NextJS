@@ -1,4 +1,5 @@
 import Header from "../Layout/Header";
+import Footer from "../Layout/Footer";
 
 function IndexPage(){
     const contentStyle = {
@@ -21,6 +22,10 @@ function IndexPage(){
                     </div>
                 </div>
             </div>
+            <Footer 
+                rightContent={""}
+                leftContent={<div className="ml-2 font-weight-bold">Fawwaz @2022 All Right Reserved</div>}
+            />
         </div>
     );
 }
