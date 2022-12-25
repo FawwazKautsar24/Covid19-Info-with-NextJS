@@ -1,5 +1,6 @@
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
+import CardStatus from "./CardStatus";
 
 function IndexPage(){
     const contentStyle = {
@@ -21,6 +22,7 @@ function IndexPage(){
                         <p className="mt-3 f18">Website Pemantauan Terkini Kasus Kasus Virus Covid19</p>
                     </div>
                 </div>
+                <CardStatus />
             </div>
             <Footer 
                 rightContent={""}
