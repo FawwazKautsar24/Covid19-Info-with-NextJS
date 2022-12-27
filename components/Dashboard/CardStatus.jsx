@@ -20,7 +20,7 @@ const CardStatus = (props) => {
                     <div className="card-body">
                         <div className="d-flex">
                             <div className="text-white">
-                                <p className="text-white mb-0">TOTAL POSITIF</p>
+                                <p className="text-white mb-0">TOTAL NEGATIF</p>
                                 <h2 className="mb-0 number-font">12.000</h2>
                                 <p className="text-white mb-0">ORANG</p>
                             </div>
