@@ -2,6 +2,7 @@ import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 import CardStatus from "./CardStatus";
 import Grafik from "./Grafik";
+import Tabel from "./Tabel";
 
 function IndexPage(props){
     const contentStyle = {
@@ -25,6 +26,7 @@ function IndexPage(props){
                 </div>
                 <CardStatus />
                 <Grafik isGlobal={props.isGlobal} />
+                <Tabel isGlobal={props.isGlobal} />
             </div>
             <Footer 
                 rightContent={""}
