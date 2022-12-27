@@ -1,8 +1,9 @@
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 import CardStatus from "./CardStatus";
+import Grafik from "./Grafik";
 
-function IndexPage(){
+function IndexPage(props){
     const contentStyle = {
         minHeight: "90vh",
         top: "56px",
@@ -23,6 +24,7 @@ function IndexPage(){
                     </div>
                 </div>
                 <CardStatus />
+                <Grafik isGlobal={props.isGlobal} />
             </div>
             <Footer 
                 rightContent={""}
