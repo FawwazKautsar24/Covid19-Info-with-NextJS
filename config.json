@@ -8,7 +8,7 @@
         "provinsi": "provinsi"
     },
     "global-api": {
-        "base_url": "https://api.covid19api.com/",
+        "base_url": "https://api.covid19api.com",
         "total_live": "/total/dayone/country"
     }
 }
