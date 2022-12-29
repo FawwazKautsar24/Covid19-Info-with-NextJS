@@ -25,7 +25,7 @@ function IndexPage(props){
                     </div>
                 </div>
                 <CardStatus isGlobal={props.isGlobal} data={props.data && props.data} />
-                <Grafik isGlobal={props.isGlobal} />
+                <Grafik isGlobal={props.isGlobal} data={props.data && props.data} statistik={props.statistik && props.statistik} />
                 <Tabel isGlobal={props.isGlobal} />
             </div>
             <Footer 
