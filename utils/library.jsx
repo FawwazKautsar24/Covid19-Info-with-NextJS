@@ -1,4 +1,9 @@
 export const sum = function(key, props){
+    if(!props.data.Global || !props.data.Countries){
+        // return alert('Loading data API from https://api.covid19api.coms');
+        return;
+    }
+
     if(props.isGlobal === true){
         switch(key){
             case 'Confirmed':

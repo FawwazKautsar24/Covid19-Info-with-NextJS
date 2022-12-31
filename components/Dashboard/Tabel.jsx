@@ -1,3 +1,5 @@
+import NumberFormat from "react-number-format";
+
 const Tabel = (props) => {
     return (
         <div className="row mb-5">
@@ -20,21 +22,29 @@ const Tabel = (props) => {
                                 </thead>
                                 <tbody>
                                     {props.isGlobal ?
-                                        <tr>
-                                            <td>1.</td>
-                                            <td>United States</td>
-                                            <td>3.000.000</td>
-                                            <td>1.000.000</td>
-                                            <td>250.000</td>
-                                        </tr>
+                                        (props.data && props.data.Countries.map((val, index) => {
+                                            return (
+                                                <tr key={index}>
+                                                    <td>{++index}.</td>
+                                                    <td>{val.Country}</td>
+                                                    <td><NumberFormat value={val.TotalConfirmed} displayType={'text'} thousandSeparator={","} decimalSeparator={"."} defaultValue={"-"} /></td>
+                                                    <td><NumberFormat value={val.TotalConfirmed - val.TotalDeaths - val.NewConfirmed} displayType={'text'} thousandSeparator={","} decimalSeparator={"."} defaultValue={"-"} /></td>
+                                                    <td><NumberFormat value={val.TotalDeaths} displayType={'text'} thousandSeparator={","} decimalSeparator={"."} defaultValue={"-"} /></td>
+                                                </tr>
+                                            );
+                                        }))
                                         :
-                                        <tr>
-                                            <td>1.</td>
-                                            <td>Jawa Timur</td>
-                                            <td>10.000</td>
-                                            <td>3.000</td>
-                                            <td>400</td>
-                                        </tr>
+                                        (props.dataIndo && props.dataIndo.list_data.map((val, index) => {
+                                            return (
+                                                <tr key={index}>
+                                                    <td>{++index}.</td>
+                                                    <td>{val.key}</td>
+                                                    <td><NumberFormat value={val.jumlah_kasus} displayType={'text'} thousandSeparator={","} decimalSeparator={"."} defaultValue={"-"} /></td>
+                                                    <td><NumberFormat value={val.jumlah_sembuh} displayType={'text'} thousandSeparator={","} decimalSeparator={"."} defaultValue={"-"} /></td>
+                                                    <td><NumberFormat value={val.jumlah_meninggal} displayType={'text'} thousandSeparator={","} decimalSeparator={"."} defaultValue={"-"} /></td>
+                                                </tr>
+                                            );
+                                        }))
                                     }
                                 </tbody>
                             </table>
