@@ -9,15 +9,17 @@ class Indonesia extends React.Component{
         const items = await data.json();
         const stat = await fetch(`${config["global-api"].base_url}${config["global-api"].total_live}/indonesia`);
         const statData = await stat.json();
+        const dataIndo = await fetch(`${config["local-api"].base_url}/prov.json`);
+        const itemsIndo = await dataIndo.json();
         
-        return { items, statData };
+        return { items, statData, itemsIndo };
     }
     
     render(){
-        const { items, statData } = this.props;
+        const { items, statData, itemsIndo } = this.props;
 
         return (
-            <IndexPage isGlobal={false} data={items} statistik={statData} />
+            <IndexPage isGlobal={false} data={items} statistik={statData} dataIndo={itemsIndo} />
         );
     }
 }
